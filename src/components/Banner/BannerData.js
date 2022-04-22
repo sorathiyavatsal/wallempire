@@ -1,14 +1,14 @@
-export const BannerData = [
-    {
-        image: 'https://wall-empire.com/demo/wp-content/uploads/2020/10/01.jpg'
-    },
-    {
-        image: 'https://wall-empire.com/demo/wp-content/uploads/2020/10/02.jpg'
-    },
-    {
-        image: 'https://wall-empire.com/wp-content/uploads/2021/03/5303.1_2.jpg'
-    },
-    {
-        image: 'https://wall-empire.com/wp-content/uploads/2020/10/04.jpg'
-    }
-];
+// [
+//     {
+//         image: 'https://res.cloudinary.com/wall-empire/image/upload/v1650450314/images/01_nagxld.jpg'
+//     },
+//     {
+//         image: 'https://res.cloudinary.com/wall-empire/image/upload/v1650450319/images/02_xljira.jpg'
+//     },
+//     {
+//         image: 'https://res.cloudinary.com/wall-empire/image/upload/v1650450313/images/04_gm1m0b.jpg'
+//     },
+//     {
+//         image: 'https://res.cloudinary.com/wall-empire/image/upload/v1650450314/images/05_e21kmi.jpg'
+//     }
+// ];

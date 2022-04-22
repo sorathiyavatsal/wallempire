@@ -8,8 +8,9 @@ class ProductCategory extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { model: false, tempItem: {} };
+        this.state = { model: false, tempItem: {}, hovered: [], };
     }
+
 
     authenticate() {
         return new Promise(resolve => setTimeout(resolve, 2000))
@@ -31,7 +32,7 @@ class ProductCategory extends React.Component {
                 ele.classList.add('available')
                 setTimeout(() => {
                     // remove from DOM
-                    ele.outerHTML = ''
+                    // ele.outerHTML = ''
                 }, 2000)
             }
         })
@@ -114,7 +115,7 @@ class ProductCategory extends React.Component {
                     <LazyLoadImage layout="fill" src={this.state.tempItem.imgSrc} />
                     <X onClick={() => { this.setState({ model: false }) }} />
                 </div>
-                <div className='pt-5 pl-7 pr-7'>
+                <div className='pl-4 pr-4 md:pt-24'>
                     <div className='grid md:place-items-center'>
                         <div className='md:w-1/2 text-center mb-10 align-middle'>
                             <h1 className='text-xl font-bold p-5'>Kool Kids</h1>
@@ -127,7 +128,19 @@ class ProductCategory extends React.Component {
                             data.products.map((item, index) => {
                                 return (
                                     <div className='pics' key={index} onClick={() => this.getItem(item)}>
-                                        <LazyLoadImage layout="fill" src={item.imgSrc} />
+                                        {item.imgSrc ? <LazyLoadImage layout="fill" src={item.imgSrc}
+                                            onMouseOut={() => {
+                                                let hovered = [...this.state.hovered];
+                                                hovered[index] = false;
+                                                this.setState({ hovered });
+                                            }}
+                                            onMouseOver={() => {
+                                                let hovered = [...this.state.hovered];
+                                                hovered[index] = true;
+                                                this.setState({ hovered });
+                                            }}
+                                            style={this.state.hovered[index] ? { transform: `${this.state.hovered[index] ? 'scale(1.1,1.1)' : 'scale(1,1)'}` } : {}}
+                                        /> : ''}
                                     </div>
                                 );
                             })

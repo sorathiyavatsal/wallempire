@@ -83,13 +83,13 @@ class Registration extends React.Component {
         return (
             <div>
                 <Header />
-                <div className="lg:flex">
+                <div className="lg:flex md:pt-24">
                     <div className="hidden lg:flex items-center justify-center flex-1 h-screen">
                         <div className="max-w-80 transform duration-200 hover:scale-110 cursor-pointer">
                             <LazyLoadImage
                                 className="h-screen"
                                 alt="Loading Image"
-                                src="http://wall-empire.com/demo/wp-content/uploads/2021/01/16.jpg" />
+                                src="https://res.cloudinary.com/wall-empire/image/upload/v1650571838/images/16_poggre.jpg" />
                         </div>
                     </div>
                     <div className="lg:w-1/2 xl:max-w-screen-sm">
